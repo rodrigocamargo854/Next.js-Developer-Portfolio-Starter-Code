@@ -4,9 +4,9 @@ import { Inter } from "next/font/google";
 import { Layout } from "@/components/Layout";
 import profilePic from "../../public/images/profile/me-developr.png";
 import { AnimatedText } from "@/components/AnimatedText";
+import Link from "next/link";
+import { LinkArrow } from "@/components/Icons";
 const inter = Inter({ subsets: ["latin"] });
-
-
 
 export default function Home() {
   return (
@@ -26,13 +26,35 @@ export default function Home() {
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
-              <AnimatedText text="Turning Vision into Reality with Code And Design" className='!text-4xl !text-left'/>
-              <p>
+              <AnimatedText
+                text="Turning Vision into Reality with Code And Design"
+                className="!text-4xl !text-left"
+              />
+              <p className="my-4 text-base font-light">
                 As a skilled full-stack developer, I am dedicated to turning
                 ideas into innovative web applications. Explore my latest
                 projects and articles, showcasing my expertise in React.js and
                 web development.
               </p>
+              <div className="flex items-center self-start mt-2 font-light">
+                <Link
+                  href="/dummy.pdf"
+                  target={"_blank"}
+                  className="flex items-center bg-dark text-light px-3 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
+                  border-2 border-solid border-transparent hover:border-dark transition duration-500
+                  "
+                  download={true}
+                >
+                  Resume <LinkArrow className={'w-6 ml-1'}/>
+                </Link>
+                <Link
+                  href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                  target={"_blank"}
+                  className="ml-4 tex-lg font-medium capitalize text-dark underline"
+                >
+                  Contact
+                </Link>
+              </div>
             </div>
           </div>
         </Layout>
