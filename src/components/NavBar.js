@@ -48,7 +48,7 @@ const NavBar = () => {
         </motion.a>
         <motion.a
           className="w-8 h-8 mx-3"
-          href="https://"
+          href="https://www.linkedin.com/in/rodrigo-camargo-a569b5179/"
           target="_blank"
           whileHover={{y:-2}}
           whileTap={{ scale: 0.9 }}
