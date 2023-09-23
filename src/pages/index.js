@@ -3,7 +3,10 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Layout } from "@/components/Layout";
 import profilePic from "../../public/images/profile/me-developr.png";
+import { AnimatedText } from "@/components/AnimatedText";
 const inter = Inter({ subsets: ["latin"] });
+
+
 
 export default function Home() {
   return (
@@ -22,8 +25,8 @@ export default function Home() {
                 className="w-50 h-50 transform scale-x-[-1]"
               />
             </div>
-            <div className="w-1/2">
-              <h1>Turning Vision into Reality with Code And Design</h1>
+            <div className="w-1/2 flex flex-col items-center self-center">
+              <AnimatedText text="Turning Vision into Reality with Code And Design" className='!text-4xl !text-left'/>
               <p>
                 As a skilled full-stack developer, I am dedicated to turning
                 ideas into innovative web applications. Explore my latest

@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
+      animation: {
+        gradientAnimation: 'gradientAnimation 3s infinite',
+      },
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
