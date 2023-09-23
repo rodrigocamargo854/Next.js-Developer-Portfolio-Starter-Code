@@ -38,28 +38,24 @@ const NavBar = () => {
       </nav>
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
-                className='w-8 h-8'
-
+          whileHover={{y:-2}}
+          className="w-8 h-8 mx-3"
           href="https://modernthreejs-iqgk-7czyso6db-rodrigocamargo854.vercel.app/"
           target="_blank"
-          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <GithubIcon  />
+          <GithubIcon />
         </motion.a>
         <motion.a
-        className='w-8 h-8'
-
+          className="w-8 h-8 mx-3"
           href="https://"
           target="_blank"
-          whileHover={{ y: -2 }}
+          whileHover={{y:-2}}
+          whileTap={{ scale: 0.9 }}
         >
-          <LinkedInIcon className="w-16 h-16" />
+          <LinkedInIcon  />
         </motion.a>
       </nav>
-
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
-      </div>
     </header>
   );
 };
