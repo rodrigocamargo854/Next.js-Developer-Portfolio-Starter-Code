@@ -6,6 +6,9 @@ import profilePic from "../../public/images/profile/me-developr.png";
 import { AnimatedText } from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
+import HireMe from "@/components/HireMe";
+import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -58,6 +61,10 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+        <HireMe/>
+        <div className= 'absolute right-8 bottom-8 inline-block w-24 w-full h-auto'>
+          <Image src={lightBulb} alt="Rodrigo Camargo" />
+        </div>
       </main>
     </>
   );
