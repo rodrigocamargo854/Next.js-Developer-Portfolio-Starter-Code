@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import {Logo} from '../components/Logo.js'
 import {
   GithubIcon,
   LinkedInIcon,
@@ -32,6 +33,7 @@ const NavBar = () => {
         <CustomLink title="Projects" href="/projects" className="mr-4" />
         <CustomLink title="Articles" href="/articles" className="ml-4" />
       </nav>
+        <Logo/>
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
           whileHover={{y:-2}}

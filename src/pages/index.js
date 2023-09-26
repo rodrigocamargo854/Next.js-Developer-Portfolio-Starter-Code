@@ -7,7 +7,7 @@ import { AnimatedText } from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
-import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
+import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +25,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="me"
-                className="w-50 h-50 transform scale-x-[-1]"
+                className="w-full h-auto transform scale-x-[-1]"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
@@ -48,7 +48,7 @@ export default function Home() {
                   "
                   download={true}
                 >
-                  Resume <LinkArrow className={'w-6 ml-1'}/>
+                  Resume <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <Link
                   href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
@@ -61,8 +61,8 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-        <HireMe/>
-        <div className= 'absolute right-8 bottom-8 inline-block w-24 w-full h-auto'>
+        <HireMe />
+        <div className="absolute right-8 bottom-8 inline-block w-24 ">
           <Image src={lightBulb} alt="Rodrigo Camargo" />
         </div>
       </main>
