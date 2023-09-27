@@ -6,6 +6,12 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/profile_a.png";
 import { useRef, useEffect } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
+import beesIcon from '../../public/images/svgs/bees.jpeg'
+import ambevTechIcon from '../../public/images/svgs/ambevtech.jpeg'
+import stefIcon from '../../public/images/svgs/stefanini.png'
+import baraoIcon from '../../public/images/svgs/barao.jpeg'
+
+
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -109,13 +115,27 @@ const about = () => {
           </div>
         </Layout>
         <div className="flex justify-center space-x-4 mt-8 mb-8 gap-6">
-          <img src="/images/svgs/bees.jpeg" alt="Company 1" className='w-16 h-16'/>
-          <img src="/images/svgs/ambevtech.jpeg" className='w-16 h-16' alt="Company 2" />
-          <img src="/images/svgs/stefanini.png" className='w-17 h-16' alt="Company 3" />
-          <img src="/images/svgs/barao.jpeg" className='w-16 h-16' alt="Company 4" />
-
-
-          {/* Add more icons as needed */}
+        <Image
+                src={beesIcon}
+                alt="Company 1"
+                className='w-16 h-16'
+              />
+              <Image
+                src={ambevTechIcon}
+                alt="Company 2"
+                className='w-16 h-16'
+              />
+              <Image
+                src={stefIcon}
+                alt="Company 3"
+                className='w-16 h-16'
+              />
+              <Image
+                src={baraoIcon}
+                alt="Company 4"
+                className='w-16 h-16'
+              />
+      
         </div>
       </main>
     </>
