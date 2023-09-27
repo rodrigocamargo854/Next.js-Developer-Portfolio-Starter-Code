@@ -25,7 +25,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="me"
-                className="w-full h-auto transform scale-x-[-1]"
+                className="w-96 h-auto transform scale-x-[-1] "
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">

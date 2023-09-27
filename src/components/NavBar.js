@@ -28,7 +28,7 @@ const NavBar = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
-        <CustomLink title="home" href="/" className="mr-4" />
+        <CustomLink title="Home" href="/" className="mr-4" />
         <CustomLink title="About" href="/about" className="mr-4" />
         <CustomLink title="Projects" href="/projects" className="mr-4" />
         <CustomLink title="Articles" href="/articles" className="ml-4" />

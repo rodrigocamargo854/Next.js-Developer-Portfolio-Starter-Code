@@ -3,7 +3,7 @@ import React from "react";
 import { AnimatedText } from "../components/AnimatedText";
 import { Layout } from "@/components/Layout";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/developer-pic-2.jpg"
+import profilePic from "../../public/images/profile/profile_a.png"
 
 const about = () => {
   return (
@@ -44,7 +44,7 @@ const about = () => {
               </p>
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
-              <Image src={profilePic} alt='me-profile' className='w-full h-auto rounded-2xl'/>
+              <Image src={profilePic} alt='me-profile' className='w-80 h-auto rounded-2xl bg-dark'/>
             </div>
           </div>
         </Layout>
