@@ -57,11 +57,11 @@ const about = () => {
                 Biography
               </h2>
               <p className="my-4  font-light">
-                Hi, I'm Rodrigo Camargo, a web developer and Backend developer
+                Hi, I m Rodrigo Camargo, a web developer and Backend developer
                 with a passion for creating beautiful, functional, and
                 user-centered digital experiences. With 3+ years of experience
                 in the field. I am always looking for new and innovative ways to
-                bring my clients' visions to life.
+                bring my clients visions to life.
               </p>
               <p className=" font-light">
                 I mainly work with React.js and TypeScript, but I have also
