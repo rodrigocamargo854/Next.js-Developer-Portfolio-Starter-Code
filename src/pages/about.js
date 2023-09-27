@@ -10,7 +10,7 @@ import beesIcon from '../../public/images/svgs/bees.jpeg'
 import ambevTechIcon from '../../public/images/svgs/ambevtech.jpeg'
 import stefIcon from '../../public/images/svgs/stefanini.png'
 import baraoIcon from '../../public/images/svgs/barao.jpeg'
-
+import {Skills} from '../components/Skills'
 
 
 const AnimatedNumbers = ({ value }) => {
@@ -113,6 +113,7 @@ const about = () => {
               </div>
             </div>
           </div>
+          <Skills/>
         </Layout>
         <div className="flex justify-center space-x-4 mt-8 mb-8 gap-6">
         <Image
