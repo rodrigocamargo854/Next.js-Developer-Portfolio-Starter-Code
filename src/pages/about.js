@@ -12,7 +12,7 @@ const AnimatedNumbers = ({ value }) => {
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInview = useInView(ref,{once:true});
+  const isInview = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInview) {
@@ -108,6 +108,15 @@ const about = () => {
             </div>
           </div>
         </Layout>
+        <div className="flex justify-center space-x-4 mt-8 mb-8 gap-6">
+          <img src="/images/svgs/bees.jpeg" alt="Company 1" className='w-16 h-16'/>
+          <img src="/images/svgs/ambevtech.jpeg" className='w-16 h-16' alt="Company 2" />
+          <img src="/images/svgs/stefanini.png" className='w-17 h-16' alt="Company 3" />
+          <img src="/images/svgs/barao.jpeg" className='w-16 h-16' alt="Company 4" />
+
+
+          {/* Add more icons as needed */}
+        </div>
       </main>
     </>
   );
