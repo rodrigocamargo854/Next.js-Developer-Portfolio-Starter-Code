@@ -2,11 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import {Logo} from '../components/Logo.js'
-import {
-  GithubIcon,
-  LinkedInIcon,
-} from "../components/Icons";
+import { Logo } from "../components/Logo.js";
+import { GithubIcon, LinkedInIcon } from "../components/Icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -26,17 +23,17 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 const NavBar = () => {
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
-      <nav>
+    <header className="w-full px-4 sm:px-32 py-8 font-medium flex flex-col sm:flex-row items-center justify-between">
+      <nav className="b-4 sm:mb-0 flex flex-col sm:flex-row sm:items-center">
         <CustomLink title="Home" href="/" className="mr-4" />
         <CustomLink title="About" href="/about" className="mr-4" />
         <CustomLink title="Projects" href="/projects" className="mr-4" />
         <CustomLink title="Articles" href="/articles" className="ml-4" />
       </nav>
-        <Logo/>
-      <nav className="flex items-center justify-center flex-wrap">
+      <Logo />
+      <nav className="flex items-center justify-center flex-wrap mt-4 sm:mt-0">
         <motion.a
-          whileHover={{y:-2}}
+          whileHover={{ y: -2 }}
           className="w-8 h-8 mx-3"
           href="https://modernthreejs-iqgk-7czyso6db-rodrigocamargo854.vercel.app/"
           target="_blank"
@@ -48,10 +45,10 @@ const NavBar = () => {
           className="w-8 h-8 mx-3"
           href="https://www.linkedin.com/in/rodrigo-camargo-a569b5179/"
           target="_blank"
-          whileHover={{y:-2}}
+          whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
-          <LinkedInIcon  />
+          <LinkedInIcon />
         </motion.a>
       </nav>
     </header>
