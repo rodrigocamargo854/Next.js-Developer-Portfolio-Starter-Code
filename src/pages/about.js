@@ -39,7 +39,7 @@ const AnimatedNumbers = ({ value }) => {
 
 const about = () => {
   return (
-    <>
+    <div>
       <Head>
         <title>Rodrigo Camargo | About</title>
         <meta name="description" content="any description" />
@@ -139,7 +139,7 @@ const about = () => {
       
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
