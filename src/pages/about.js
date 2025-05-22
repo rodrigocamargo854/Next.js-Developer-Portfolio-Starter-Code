@@ -6,8 +6,9 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/profile_a.jpeg";
 import beesIcon from '../../public/images/svgs/bees.jpeg';
 import ambevTechIcon from '../../public/images/svgs/ambevtech.jpeg';
-import stefIcon from '../../public/images/svgs/stefanini.png';
+import stefIcon from '../../public/images/svgs/stefanini.webp';
 import baraoIcon from '../../public/images/svgs/barao.jpeg';
+import dellIcon from '../../public/images/svgs/dell.png';
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { Skills } from '../components/Skills';
 
@@ -50,7 +51,6 @@ const About = () => {
           />
 
           <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-8 md:gap-16">
-            {/* Bio */}
             <div className="md:col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                 Biography
@@ -66,7 +66,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* Profile Image */}
             <div className="md:col-span-3 flex justify-center md:justify-start">
               <div className="relative h-max rounded-2xl border-2 border-solid border-dark 
     bg-light dark:bg-slate-800 p-6 md:p-8">
@@ -78,11 +77,10 @@ const About = () => {
               </div>
             </div>
 
-            {/* Numbers */}
             <div className="md:col-span-2 flex flex-row md:flex-col items-center md:items-end justify-between gap-4 md:gap-0">
               <div className="flex flex-col items-center md:items-end">
                 <span className="inline-block text-5xl md:text-7xl font-bold">
-                  <AnimatedNumbers value={5} />+
+                  <AnimatedNumbers value={12} />+
                 </span>
                 <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
                   Satisfied clients
@@ -100,7 +98,7 @@ const About = () => {
 
               <div className="flex flex-col items-center md:items-end">
                 <span className="inline-block text-5xl md:text-7xl font-bold">
-                  <AnimatedNumbers value={4} />+
+                  <AnimatedNumbers value={6} />+
                 </span>
                 <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
                   Years of experience
@@ -116,8 +114,14 @@ const About = () => {
         <div className="flex justify-center space-x-4 mt-10 mb-10 gap-6 flex-wrap">
           <Image src={beesIcon} alt="Bees" className="w-16 h-16 rounded-lg" />
           <Image src={ambevTechIcon} alt="Ambev Tech" className="w-16 h-16 rounded-lg" />
-          <Image src={stefIcon} alt="Stefanini" className="w-16 h-16 rounded-lg" />
+          <Image 
+  src={stefIcon} 
+  alt="Stefanini" 
+  className="w-16 h-16 rounded-lg brightness-150 contrast-125"
+/>
           <Image src={baraoIcon} alt="Barão" className="w-16 h-16 rounded-lg" />
+          <Image src={dellIcon} alt="Barão" className="w-16 h-16 rounded-lg" />
+
         </div>
       </main>
     </div>

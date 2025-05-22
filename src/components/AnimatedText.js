@@ -32,7 +32,12 @@ const singleWord = {
 
 export const AnimatedText = ({ text, className = "" }) => {
   return (
-    <div className="w-full mx-auto py-2 px-4 flex flex-col items-center justify-center text-center overflow-hidden">
+    <motion.div
+      className="w-full mx-auto py-2 px-4 flex flex-col items-center justify-center text-center overflow-hidden"
+      variants={quote}
+      initial="initial"
+      animate="animate"
+    >
       <motion.h1
         className={`
           text-dark font-bold capitalize 
@@ -41,9 +46,6 @@ export const AnimatedText = ({ text, className = "" }) => {
           ${className}
           max-w-[90%] sm:max-w-[85%] break-words
         `}
-        variants={quote}
-        initial="initial"
-        animate="animate"
       >
         {text.split(" ").map((word, index) => (
           <motion.span
@@ -55,6 +57,6 @@ export const AnimatedText = ({ text, className = "" }) => {
           </motion.span>
         ))}
       </motion.h1>
-    </div>
+    </motion.div>
   );
 };
