@@ -10,6 +10,7 @@ import movies from "../../public/images/projects/movies.png";
 import remote from "../../public/images/projects/remote.png";
 import rickmorty from "../../public/images/projects/rick.png";
 import minecraft from "../../public/images/projects/minecraft.png";
+import vitethreejs from "../../public/images/projects/vitethreejs.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -71,6 +72,15 @@ const projects = [
     github: "https://github.com/yourusername/minecraft-chest-clone",
     stack: ["React", "CSS", "HTML"],
   },
+  {
+    title: "Vite Landing Page",
+    description:
+      "A landing page made with pure Vite, Tailwind, and HTML. Featuring smooth transitions, animated text, and a minimalistic design.",
+    image: vitethreejs, 
+    link: "https://seuprojeto.vercel.app/",
+    github: "https://github.com/seuusuario/vite-landing-page",
+    stack: ["Vite", "Tailwind", "HTML", "CSS"],
+  },
 ];
 
 const Projects = () => {
@@ -113,7 +123,7 @@ const Projects = () => {
           alt={project.title}
           className="w-full h-48 object-cover rounded-2xl"
         />
-        <h2 className="text-2xl font-bold text-center mt-4">
+        <h2 className="text-2xl font-bold text-center mt-4 dark:text-light/70">
           {project.title}
         </h2>
         <p className="text-sm md:text-base text-center text-dark/70 dark:text-light/70">
