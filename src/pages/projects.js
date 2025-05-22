@@ -77,7 +77,7 @@ const projects = [
     description:
       "A landing page made with pure Vite, Tailwind, and HTML. Featuring smooth transitions, animated text, and a minimalistic design.",
     image: vitethreejs, 
-    link: "https://seuprojeto.vercel.app/",
+    link: "https://modernthreejs-iqgk.vercel.app/",
     github: "https://github.com/seuusuario/vite-landing-page",
     stack: ["Vite", "Tailwind", "HTML", "CSS"],
   },
