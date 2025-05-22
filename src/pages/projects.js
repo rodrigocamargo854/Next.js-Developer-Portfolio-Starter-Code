@@ -11,6 +11,11 @@ import remote from "../../public/images/projects/remote.png";
 import rickmorty from "../../public/images/projects/rick.png";
 import minecraft from "../../public/images/projects/minecraft.png";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+
 const projects = [
   {
     title: "Santodex",
@@ -83,52 +88,69 @@ const Projects = () => {
             className="!text-6xl md:!text-8xl !text-center mb-12 md:mb-16"
           />
 
-          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:gap-16">
-            {projects.map((project) => (
-              <div
-                key={project.title}
-                className="flex flex-col items-center justify-center rounded-2xl border-2 border-solid border-dark bg-light dark:bg-slate-800 p-6 md:p-8 shadow-md"
-              >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-auto rounded-2xl object-cover"
-                />
-                <h2 className="text-2xl font-bold text-center mt-6 mb-2">
-                  {project.title}
-                </h2>
-                <p className="text-sm md:text-base text-center text-dark/70 dark:text-light/70">
-                  {project.description}
-                </p>
-                <div className="flex gap-2 flex-wrap justify-center mt-4">
-                  {project.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-dark/90 text-light px-3 py-1 rounded-full text-xs md:text-sm dark:bg-light/90 dark:text-dark"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-6 mt-6">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="text-sm font-medium underline text-white hover:text-blue-500"
-                  >
-                    Code
-                  </a>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    className="text-sm font-medium underline text-white hover:text-blue-500"
-                  >
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+<Swiper
+  modules={[Pagination]}
+  spaceBetween={20}
+  pagination={{ clickable: true }}
+  className="!pb-10"
+  breakpoints={{
+    320: { slidesPerView: 1 },
+    640: { slidesPerView: 1.2 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+>
+  {projects.map((project) => (
+    <SwiperSlide key={project.title}>
+      <div
+        className="flex flex-col items-center justify-between
+        rounded-2xl border-2 border-solid border-dark
+        bg-light dark:bg-slate-800 p-4 md:p-6 shadow-md
+        h-auto min-h-[500px] max-w-[90vw] sm:max-w-[80vw] md:max-w-[350px] mx-auto"
+      >
+        <Image
+          src={project.image}
+          alt={project.title}
+          className="w-full h-48 object-cover rounded-2xl"
+        />
+        <h2 className="text-2xl font-bold text-center mt-4">
+          {project.title}
+        </h2>
+        <p className="text-sm md:text-base text-center text-dark/70 dark:text-light/70">
+          {project.description}
+        </p>
+        <div className="flex gap-2 flex-wrap justify-center mt-2">
+          {project.stack.map((tech) => (
+            <span
+              key={tech}
+              className="bg-dark/90 text-light px-3 py-1 rounded-full text-xs md:text-sm dark:bg-light/90 dark:text-dark"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div className="flex gap-6 mt-4">
+          <a
+            href={project.github}
+            target="_blank"
+            className="text-sm font-medium underline text-white hover:text-blue-500"
+          >
+            Code
+          </a>
+          <a
+            href={project.link}
+            target="_blank"
+            className="text-sm font-medium underline text-white hover:text-blue-500"
+          >
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
         </Layout>
       </main>
     </div>

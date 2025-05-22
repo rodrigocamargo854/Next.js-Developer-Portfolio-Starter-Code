@@ -11,6 +11,12 @@ import baraoIcon from '../../public/images/svgs/barao.jpeg';
 import dellIcon from '../../public/images/svgs/dell.png';
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { Skills } from '../components/Skills';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -114,11 +120,11 @@ const About = () => {
         <div className="flex justify-center space-x-4 mt-10 mb-10 gap-6 flex-wrap">
           <Image src={beesIcon} alt="Bees" className="w-16 h-16 rounded-lg" />
           <Image src={ambevTechIcon} alt="Ambev Tech" className="w-16 h-16 rounded-lg" />
-          <Image 
-  src={stefIcon} 
-  alt="Stefanini" 
-  className="w-16 h-16 rounded-lg brightness-150 contrast-125"
-/>
+          <Image
+            src={stefIcon}
+            alt="Stefanini"
+            className="w-16 h-16 rounded-lg brightness-150 contrast-125"
+          />
           <Image src={baraoIcon} alt="Barão" className="w-16 h-16 rounded-lg" />
           <Image src={dellIcon} alt="Barão" className="w-16 h-16 rounded-lg" />
 

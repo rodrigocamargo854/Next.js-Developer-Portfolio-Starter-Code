@@ -33,18 +33,20 @@ const singleWord = {
 export const AnimatedText = ({ text, className = "" }) => {
   return (
     <motion.div
-      className="w-full mx-auto py-2 px-4 flex flex-col items-center justify-center text-center overflow-hidden"
+      className="w-full mx-auto py-4 px-4 flex flex-col items-center justify-center text-center overflow-hidden"
       variants={quote}
       initial="initial"
       animate="animate"
     >
       <motion.h1
         className={`
-          text-dark font-bold capitalize 
+          text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 
+          font-bold capitalize 
           bg-clip-text text-transparent bg-gradient-to-r 
           from-blue-500 via-pink-500 to-yellow-500 
           ${className}
-          max-w-[90%] sm:max-w-[85%] break-words
+          max-w-[95%] sm:max-w-[85%] md:max-w-[80%] 
+          break-words leading-tight
         `}
       >
         {text.split(" ").map((word, index) => (
