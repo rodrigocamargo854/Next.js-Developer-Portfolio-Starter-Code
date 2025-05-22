@@ -3,6 +3,12 @@ import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
+import { Sora } from 'next/font/google';
+
+const sora = Sora({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 
 const montserrat = Montserrat({
   subsets: ["latin"],

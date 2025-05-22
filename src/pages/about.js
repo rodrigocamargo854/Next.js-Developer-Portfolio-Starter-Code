@@ -1,30 +1,27 @@
 import Head from "next/head";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { AnimatedText } from "../components/AnimatedText";
 import { Layout } from "@/components/Layout";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/profile_a.png";
-import { useRef, useEffect } from "react";
+import profilePic from "../../public/images/profile/profile_a.jpeg";
+import beesIcon from '../../public/images/svgs/bees.jpeg';
+import ambevTechIcon from '../../public/images/svgs/ambevtech.jpeg';
+import stefIcon from '../../public/images/svgs/stefanini.png';
+import baraoIcon from '../../public/images/svgs/barao.jpeg';
 import { useInView, useMotionValue, useSpring } from "framer-motion";
-import beesIcon from '../../public/images/svgs/bees.jpeg'
-import ambevTechIcon from '../../public/images/svgs/ambevtech.jpeg'
-import stefIcon from '../../public/images/svgs/stefanini.png'
-import baraoIcon from '../../public/images/svgs/barao.jpeg'
-import {Skills} from '../components/Skills'
-
+import { Skills } from '../components/Skills';
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
-
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInview = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    if (isInview) {
+    if (isInView) {
       motionValue.set(value);
     }
-  }, [isInview, value, motionValue]);
+  }, [isInView, value, motionValue]);
 
   useEffect(() => {
     springValue.on("change", (latest) => {
@@ -37,110 +34,94 @@ const AnimatedNumbers = ({ value }) => {
   return <span ref={ref}></span>;
 };
 
-const about = () => {
+const About = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-950 dark:to-black w-full">
       <Head>
         <title>Rodrigo Camargo | About</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="Portfolio description" />
       </Head>
 
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
-            text="Life Long Learning"
-            className="!text-8xl !text-center mb-16"
+            text="Driven by Code, Powered by Purpose"
+            className="!text-6xl md:!text-8xl !text-center mb-12 md:mb-16"
           />
-          <div className="grid w-full grid-cols-8 gap-16">
-            <div className="col-span-3 flex flex-col items-start justify-start">
+
+          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-8 md:gap-16">
+            {/* Bio */}
+            <div className="md:col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                 Biography
               </h2>
-              <p className="my-4  font-light">
-                Hi, I m Rodrigo Camargo, a web developer and Backend developer
-                with a passion for creating beautiful, functional, and
-                user-centered digital experiences. With 3+ years of experience
-                in the field. I am always looking for new and innovative ways to
-                bring my clients visions to life.
+              <p className="my-4 font-light">
+                I’m Rodrigo Camargo, a passionate Frontend Developer with a strong foundation in backend and cloud technologies. With a mindset shaped by continuous learning, I transform ideas into modern, scalable, and impactful digital solutions.
               </p>
-              <p className=" font-light">
-                I mainly work with React.js and TypeScript, but I have also
-                assisted with backend tasks using Python and C# as needed for
-                various products. Additionally, I am familiar with Agile
-                methodologies and always prioritize delivering high-quality
-                work. Recently, I have improved my understanding of security
-                application best practices, specifically those outlined by
-                OWASP, in order to ensure that my work meets product
-                specifications.I am a software developer with a focus on React,
-                TypeScript, and Node.js.
+              <p className="font-light">
+                My core stack revolves around React.js, TypeScript, Next.js, and Node.js. I also navigate backend tasks using Python, C#, and cloud solutions when the mission demands. I’m deeply focused on crafting smooth UI/UX experiences while writing clean, maintainable, and secure code.
               </p>
-            </div>
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
-              <Image
-                src={profilePic}
-                alt="me-profile"
-                className="w-80 h-auto rounded-2xl bg-dark"
-              />
+              <p className="font-light">
+                I’ve collaborated with tech giants like Ambev Tech, Bees, Stefanini, and Barão, where I refined not just my coding, but my ability to solve problems, communicate effectively, and deliver real value. Whether working with enterprise systems, SaaS products, or high-impact platforms, my goal remains simple: <strong>build things that work beautifully.</strong>
+              </p>
             </div>
 
-            <div className="col-span-2 flex flex-col items-end justify-between ">
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+            {/* Profile Image */}
+            <div className="md:col-span-3 flex justify-center md:justify-start">
+              <div className="relative h-max rounded-2xl border-2 border-solid border-dark 
+    bg-light dark:bg-slate-800 p-6 md:p-8">
+                <Image
+                  src={profilePic}
+                  alt="me-profile"
+                  className="w-64 h-auto md:w-80 rounded-2xl bg-dark"
+                />
+              </div>
+            </div>
+
+            {/* Numbers */}
+            <div className="md:col-span-2 flex flex-row md:flex-col items-center md:items-end justify-between gap-4 md:gap-0">
+              <div className="flex flex-col items-center md:items-end">
+                <span className="inline-block text-5xl md:text-7xl font-bold">
                   <AnimatedNumbers value={5} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/70">
-                  satisfied clients
+                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
+                  Satisfied clients
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
-                  <AnimatedNumbers value={10} />+
+              <div className="flex flex-col items-center md:items-end">
+                <span className="inline-block text-5xl md:text-7xl font-bold">
+                  <AnimatedNumbers value={12} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/70">
-                  {" "}
-                  projects completed
+                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
+                  Projects delivered
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+              <div className="flex flex-col items-center md:items-end">
+                <span className="inline-block text-5xl md:text-7xl font-bold">
                   <AnimatedNumbers value={4} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/70">
+                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
                   Years of experience
                 </h2>
               </div>
             </div>
           </div>
-          <Skills/>
+
+          <Skills />
         </Layout>
-        <div className="flex justify-center space-x-4 mt-8 mb-8 gap-6">
-        <Image
-                src={beesIcon}
-                alt="Company 1"
-                className='w-16 h-16'
-              />
-              <Image
-                src={ambevTechIcon}
-                alt="Company 2"
-                className='w-16 h-16'
-              />
-              <Image
-                src={stefIcon}
-                alt="Company 3"
-                className='w-16 h-16'
-              />
-              <Image
-                src={baraoIcon}
-                alt="Company 4"
-                className='w-16 h-16'
-              />
-      
+
+        {/* Companies */}
+        <div className="flex justify-center space-x-4 mt-10 mb-10 gap-6 flex-wrap">
+          <Image src={beesIcon} alt="Bees" className="w-16 h-16 rounded-lg" />
+          <Image src={ambevTechIcon} alt="Ambev Tech" className="w-16 h-16 rounded-lg" />
+          <Image src={stefIcon} alt="Stefanini" className="w-16 h-16 rounded-lg" />
+          <Image src={baraoIcon} alt="Barão" className="w-16 h-16 rounded-lg" />
         </div>
       </main>
     </div>
   );
 };
 
-export default about;
+export default About;
