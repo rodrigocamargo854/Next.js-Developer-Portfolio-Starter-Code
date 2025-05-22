@@ -11,12 +11,6 @@ import baraoIcon from '../../public/images/svgs/barao.jpeg';
 import dellIcon from '../../public/images/svgs/dell.png';
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { Skills } from '../components/Skills';
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -53,28 +47,30 @@ const About = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Driven by Code, Powered by Purpose"
-            className="!text-6xl md:!text-8xl !text-center mb-12 md:mb-16"
+            className="!text-5xl sm:!text-6xl md:!text-7xl lg:!text-8xl !text-center mb-12 md:mb-16"
           />
 
-          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-8 md:gap-16">
-            <div className="md:col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+          <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-16 w-full">
+            {/* BIO */}
+            <div className="lg:col-span-3 flex flex-col items-center lg:items-start">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light">
                 Biography
               </h2>
-              <p className="my-4 font-light">
+              <p className="my-4 font-light text-center lg:text-left">
                 I’m Rodrigo Camargo, a passionate Frontend Developer with a strong foundation in backend and cloud technologies. With a mindset shaped by continuous learning, I transform ideas into modern, scalable, and impactful digital solutions.
               </p>
-              <p className="font-light">
+              <p className="font-light text-center lg:text-left">
                 My core stack revolves around React.js, TypeScript, Next.js, and Node.js. I also navigate backend tasks using Python, C#, and cloud solutions when the mission demands. I’m deeply focused on crafting smooth UI/UX experiences while writing clean, maintainable, and secure code.
               </p>
-              <p className="font-light">
+              <p className="font-light text-center lg:text-left">
                 I’ve collaborated with tech giants like Ambev Tech, Bees, Stefanini, and Barão, where I refined not just my coding, but my ability to solve problems, communicate effectively, and deliver real value. Whether working with enterprise systems, SaaS products, or high-impact platforms, my goal remains simple: <strong>build things that work beautifully.</strong>
               </p>
             </div>
 
-            <div className="md:col-span-3 flex justify-center md:justify-start">
+            {/* PROFILE IMAGE */}
+            <div className="lg:col-span-3 flex justify-center">
               <div className="relative h-max rounded-2xl border-2 border-solid border-dark 
-    bg-light dark:bg-slate-800 p-6 md:p-8">
+                bg-light dark:bg-slate-800 p-6 md:p-8">
                 <Image
                   src={profilePic}
                   alt="me-profile"
@@ -83,30 +79,31 @@ const About = () => {
               </div>
             </div>
 
-            <div className="md:col-span-2 flex flex-row md:flex-col items-center md:items-end justify-between gap-4 md:gap-0">
-              <div className="flex flex-col items-center md:items-end">
+            {/* STATS */}
+            <div className="lg:col-span-2 flex flex-row lg:flex-col items-center lg:items-end justify-between gap-4 lg:gap-0">
+              <div className="flex flex-col items-center lg:items-end">
                 <span className="inline-block text-5xl md:text-7xl font-bold">
                   <AnimatedNumbers value={12} />+
                 </span>
-                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
+                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70 dark:text-light/70">
                   Satisfied clients
                 </h2>
               </div>
 
-              <div className="flex flex-col items-center md:items-end">
+              <div className="flex flex-col items-center lg:items-end">
                 <span className="inline-block text-5xl md:text-7xl font-bold">
                   <AnimatedNumbers value={12} />+
                 </span>
-                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
+                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70 dark:text-light/70">
                   Projects delivered
                 </h2>
               </div>
 
-              <div className="flex flex-col items-center md:items-end">
+              <div className="flex flex-col items-center lg:items-end">
                 <span className="inline-block text-5xl md:text-7xl font-bold">
                   <AnimatedNumbers value={6} />+
                 </span>
-                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70">
+                <h2 className="text-lg md:text-xl font-medium capitalize text-dark/70 dark:text-light/70">
                   Years of experience
                 </h2>
               </div>
@@ -126,8 +123,7 @@ const About = () => {
             className="w-16 h-16 rounded-lg brightness-150 contrast-125"
           />
           <Image src={baraoIcon} alt="Barão" className="w-16 h-16 rounded-lg" />
-          <Image src={dellIcon} alt="Barão" className="w-16 h-16 rounded-lg" />
-
+          <Image src={dellIcon} alt="Dell" className="w-16 h-16 rounded-lg" />
         </div>
       </main>
     </div>
