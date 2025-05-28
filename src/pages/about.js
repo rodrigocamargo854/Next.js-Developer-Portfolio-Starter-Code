@@ -38,7 +38,7 @@ const AnimatedNumbers = ({ value }) => {
 
 const About = () => {
   return (
-    <div className="bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-950 dark:to-black w-full min-h-screen">
+    <div className="dark:bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-950 dark:to-black w-full min-h-screen">
       <Head>
         <title>Rodrigo Camargo | About</title>
         <meta name="description" content="Portfolio description" />
