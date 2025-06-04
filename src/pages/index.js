@@ -44,7 +44,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row items-center mt-4">
                 <Link
-                  href="/dummy.pdf"
+                  href="/resume.pdf"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light px-6 py-2 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                   border-2 border-solid border-transparent hover:border-dark transition duration-500"
